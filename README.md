@@ -110,5 +110,9 @@ try{
 - 在把项目从mac迁移到其他平台的过程中一定要注意删除某些配置文件。
 - 项目开发过程一定要重视任何时刻出现的error信息。即便此刻没有影响，最终项目出问题也极有可能就是在此处。这也是寻找bug源头的首选之地。
 
-  
+# Screenshots
+
+![](http://ww4.sinaimg.cn/large/005tGCqhjw1ez9p00aldkj311y0k8afs.jpg)<br>
+![](http://ww4.sinaimg.cn/large/005tGCqhjw1ez9p0jme8sj311y0k8jxy.jpg)<br>
+![](http://ww3.sinaimg.cn/large/005tGCqhjw1ez9p0tq4daj311y0k8k07.jpg)
 
