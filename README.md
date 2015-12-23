@@ -89,8 +89,8 @@ try{
 - Run as -> server -> 选择tomcat。
 
 ## One More Thing
-本项目是一个典型的JavaWeb项目，开发环境也是最基本的jdk + eclispe + tomcat + sql server模式，但我在环境搭建的过程中却遇到了几乎是
-迄今为止���最令我感到棘手的bug。
+    本项目是一个典型的JavaWeb项目，开发环境也是最基本的jdk + eclispe + tomcat + sql server模式，但我在环境搭建的过程中却遇到了几乎是
+迄今为止最令我感到棘手的bug。
 
   
 
