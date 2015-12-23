@@ -91,10 +91,14 @@ try{
 ## One More Thing
 本项目是一个典型的JavaWeb项目，开发环境也是最基本的jdk + eclispe + tomcat + sql server模式，但我在环境搭建的过程中却遇到了几乎是
 迄今为止最令我感到棘手的bug。:disappointed:<br>
+<br>
 按照上述环境配置步骤搭建好java/tomcat/sql server开发环境后，jdk / sql server 单独测试成功，通过一个demo测试jdbc连接同样成功。但在启动tomcat服务器时发现会首先pop几个null pointer exception ，然后提示“tomcat在xxx ms内启动”。在浏览器访问http://localhost:8080也可看到Apache欢迎界面表示服务器启动成功，遂没有在意启动之前报的错误。但在运行完整的jsp项目时出错。通过Apache页面看到是http 500 错误，按照stack trace看到是在第一次通过jdbc连接数据库时报错。<br>
+<br>
 诡异的是，eclipse本身并没有报任何错误，我单独重新建立一个类似的demo运行，相同的配置，相同的代码运行成功。<br>
 重新从头到尾检查了一遍jdk/eclipse/sql server/jdbc配置，也发现不了任何问题。<br>
+<br>
 后来从eclipse工程中展开每个目录，发现在jdbc.jar包下每个xxx.jar都有一个对应的._xxx.jar并且是“模糊”的，遂前往工程所在文件夹，“”查看“中设置所有隐藏文件可见，结果在每个文件夹下都发现了._文件，其中发现了._DS_STORE文件，这是Mac OS保存文件夹的自定义属性的隐藏文件，如文件的图标位置或背景色，相当于Windows的desktop.ini。把这些隐藏文件都删除后重新运行，终于成功了！<br>
+<br>
 此时tomcat启动时也不会pop exception了，这才想起之前报的那些错误就是"...addtional ._sqljdbc4.jar..."！如果一开始就重视这个错误并修改的话，后来也不会这么大费周章了。<br>
 后来我想起来，自己在开发过程中项目文件夹存储在U盘中，后来因为其他需要曾在Mac下使用过该U盘，Mac OS自动在U盘下的每个文件夹添加了许多隐藏文件(._DS_Store等)，这些文件在windows下也是默认隐藏的，而在eclipse中却添加到了文件目录下。项目运行时会遍历这些“莫名其妙”的文件，导致出错。<br>
 <br>
