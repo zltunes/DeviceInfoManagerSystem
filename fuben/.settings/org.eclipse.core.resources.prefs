@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+encoding//src/applyservlet/Applyaddstudent.java=UTF-8
+encoding//src/deviceservlet/Deviceaddstudent.java=UTF-8
+encoding//src/deviceservlet/Devicedeletestudent.java=UTF-8
+encoding//src/deviceservlet/Devicemodifystudent.java=UTF-8
+encoding//src/deviceservlet/checkmodifystudent.java=UTF-8
+encoding//src/deviceservlet/weixiumodifystudent.java=UTF-8
